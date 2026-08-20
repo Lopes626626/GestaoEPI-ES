@@ -37,6 +37,17 @@ Projeto desenvolvido para o Checkpoint de Engenharia de Software - FIAP.
 - Integração de hardware físico.
 - Sistemas de banco de dados relacionais complexos em nuvem.
 
+## 📐 Modelagem UML
+
+![Diagrama de Classes UML](docs/Modelagem%20UML.png)
+
+**Descrição da Modelagem:**
+O diagrama acima representa a estrutura principal de dados e classes do VisioGuard, refletindo a lógica que será implementada no Python (Google Colab). Ele é composto por três entidades fundamentais:
+
+*   **Funcionario:** Representa o colaborador da indústria, contendo suas informações de identificação (ID, nome, matrícula e setor) e os métodos básicos de cadastro e atualização.
+*   **EPI:** Armazena os dados dos equipamentos de proteção, com foco especial na `data_validade` e no `status` (ex: disponível, em uso, descartado), além do método para checar se o equipamento ainda é seguro para uso.
+*   **RegistroUso:** É a classe que conecta as duas pontas. Ela registra o momento exato (`data_verificacao`) em que um funcionário (`funcionario_id`) recebe e utiliza um equipamento (`epi_id`). Também armazena se o uso está dentro das regras (`conformidade`) e o impacto daquele registro na segurança geral.
+
 ## 🎨 Identidade Visual e Marca
 - **Nome:** VisioGuard
 - **Cores:** 
