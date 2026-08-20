@@ -51,7 +51,6 @@ Projeto desenvolvido para o Checkpoint de Engenharia de Software - FIAP.
 ## 📂 Estrutura de Pastas Inicial
 ```text
 /
-├── docs/           # Diagramas UML, Pitch e Documentação de Requisitos
-├── figma/          # Links do protótipo no Figma e assets (Logo, paleta)
-├── src/            # Notebooks do Google Colab (.ipynb) e scripts Python
+├── docs/                  
+├── src/            
 └── README.md
