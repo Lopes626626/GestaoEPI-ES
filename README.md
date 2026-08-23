@@ -48,13 +48,17 @@ O diagrama acima representa a estrutura principal de dados e classes do VisioGua
 *   **EPI:** Armazena os dados dos equipamentos de proteção, com foco especial na `data_validade` e no `status` (ex: disponível, em uso, descartado), além do método para checar se o equipamento ainda é seguro para uso.
 *   **RegistroUso:** É a classe que conecta as duas pontas. Ela registra o momento exato (`data_verificacao`) em que um funcionário (`funcionario_id`) recebe e utiliza um equipamento (`epi_id`). Também armazena se o uso está dentro das regras (`conformidade`) e o impacto daquele registro na segurança geral.
 
-## 🎨 Identidade Visual e Marca
+- ## 🎨 Protótipo e Identidade Visual (Figma)
+Toda a concepção da marca (logo, paleta de cores, tipografia) e a construção inicial das interfaces do VisioGuard foram desenvolvidas no Figma.
+
+🔗 **[Acessar a identidade visual do projeto no Figma](https://www.figma.com/design/gjzCn0fLXneK2Z6N2l9VFR/Checkpoint---ES?node-id=3-19&t=dA5vwTSKBbMjpM50-1)**
+
 - **Nome:** VisioGuard
 - **Cores:** 
   - Amarelo Segurança (`#FFCC00`)
   - Azul Marinho (`#003366`)
   - Cinza Claro (`#F4F4F9`)
-- **Tipografia:** Inter ou Roboto
+- **Tipografia:** Pixelify Sans
 
 ## 💡 Ideia de Venda (Pitch)
 **O Diferencial:** O VisioGuard substitui planilhas confusas por um sistema inteligente e acessível. Nossa solução permite que o técnico de segurança saiba exatamente quem está com qual equipamento e quando ele vence, tudo de forma rápida e visual. *VisioGuard: proteção que você pode provar.*
