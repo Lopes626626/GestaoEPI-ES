@@ -26,29 +26,30 @@ Projeto desenvolvido para o Checkpoint de Engenharia de Software - FIAP.
 - **RNF04:** A organização das tarefas e sprints será feita no **Trello**.
 - **RNF05:** O versionamento de código e documentação será mantido no **GitHub**.
 
-## 📦 Escopo do Projeto (Primeira Versão)
-**O que ENTRA:**
-- Lógica de controle de EPIs desenvolvida e documentada no Google Colab.
-- Protótipo navegável no Figma contendo o dashboard de gestão.
-- Documentação UML (Diagrama de Classes).
-- Repositório no GitHub organizado.
+## 🧪 Ambiente de Teste e Execução
+O protótipo funcional foi desenvolvido em Python e está pronto para ser testado.
 
-**O que FICA DE FORA:**
-- Integração de hardware físico.
-- Sistemas de banco de dados relacionais complexos em nuvem.
+**Instruções de Uso:**
+1. Faça o download do arquivo `Codigo do EPI.ipynb` disponível na raiz deste repositório.
+2. Acesse o [Google Colab](https://colab.research.google.com/drive/1ZpWurHFDaMXMgvSkqg68aY5wM8lilnEZ?usp=sharing) e faça o upload do arquivo.
+3. O notebook já contém os dados mockados (funcionários e EPIs fictícios).
+4. Clique no botão de "Play" (Executar célula) ao lado do bloco de código.
+5. Interaja com o menu do sistema respondendo aos prompts de entrada diretamente no terminal inferior do Colab (ex: digite `1` para registrar uma entrega).
+6. Caso queira ver o caminho de como fica o resultado do código Python, acesse [aqui](Codigo%20do%20EPI.ipynb)
 
 ## 📐 Modelagem UML
 
+### 1. Diagrama de Classes
 ![Diagrama de Classes UML](docs/Modelagem%20UML.png)
 
-**Descrição da Modelagem:**
-O diagrama acima representa a estrutura principal de dados e classes do VisioGuard, refletindo a lógica que será implementada no Python (Google Colab). Ele é composto por três entidades fundamentais:
+**Descrição:** Representa a estrutura principal de dados e classes do VisioGuard. É composto por três entidades fundamentais: **Funcionario** (dados do colaborador), **EPI** (equipamentos e validade) e **RegistroUso** (a classe que cruza o colaborador com o equipamento utilizado no momento).
 
-*   **Funcionario:** Representa o colaborador da indústria, contendo suas informações de identificação (ID, nome, matrícula e setor) e os métodos básicos de cadastro e atualização.
-*   **EPI:** Armazena os dados dos equipamentos de proteção, com foco especial na `data_validade` e no `status` (ex: disponível, em uso, descartado), além do método para checar se o equipamento ainda é seguro para uso.
-*   **RegistroUso:** É a classe que conecta as duas pontas. Ela registra o momento exato (`data_verificacao`) em que um funcionário (`funcionario_id`) recebe e utiliza um equipamento (`epi_id`). Também armazena se o uso está dentro das regras (`conformidade`) e o impacto daquele registro na segurança geral.
+### 2. Diagrama de Sequência
+![Diagrama de Sequência](docs/Diagrama%20de%20sequencia.png)
 
-- ## 🎨 Protótipo e Identidade Visual (Figma)
+**Descrição:** O diagrama acima ilustra o fluxo principal de execução do nosso MVP. Ele demonstra a interação do gestor com o sistema em Python, desde a inicialização (onde alertas automáticos são exibidos) até o passo a passo de inserção de IDs para registrar e validar a entrega de um equipamento.
+
+## 🎨 Protótipo e Identidade Visual (Figma)
 Toda a concepção da marca (logo, paleta de cores, tipografia) e a construção inicial das interfaces do VisioGuard foram desenvolvidas no Figma.
 
 🔗 **[Acessar a identidade visual do projeto no Figma](https://www.figma.com/design/gjzCn0fLXneK2Z6N2l9VFR/Checkpoint---ES?node-id=3-19&t=dA5vwTSKBbMjpM50-1)**
@@ -60,12 +61,15 @@ Toda a concepção da marca (logo, paleta de cores, tipografia) e a construção
   - Cinza Claro (`#F4F4F9`)
 - **Tipografia:** Pixelify Sans
 
-## 💡 Ideia de Venda (Pitch)
+## 💡 Ideia de Venda e Simulação (Pitch)
 **O Diferencial:** O VisioGuard substitui planilhas confusas por um sistema inteligente e acessível. Nossa solução permite que o técnico de segurança saiba exatamente quem está com qual equipamento e quando ele vence, tudo de forma rápida e visual. *VisioGuard: proteção que você pode provar.*
 
-## 📂 Estrutura de Pastas Inicial
+
+## 📂 Estrutura de Pastas
 ```text
 /
-├── docs/                  
-├── src/            
+├── docs/
+│   ├── Diagrama de sequencia.png
+│   └── Modelagem UML.png
+├── Codigo do EPI.ipynb
 └── README.md
